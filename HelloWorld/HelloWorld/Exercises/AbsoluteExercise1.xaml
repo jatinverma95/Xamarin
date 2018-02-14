@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Exercises.AbsoluteExercise1">
+    <AbsoluteLayout>
+        <BoxView BackgroundColor="#f7f7f7"
+                 AbsoluteLayout.LayoutBounds="0,0,1,0.33"
+                 AbsoluteLayout.LayoutFlags="SizeProportional"></BoxView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center"  AbsoluteLayout.LayoutBounds="0,0,1,0.33"
+                 AbsoluteLayout.LayoutFlags="SizeProportional">
+            <Label TextColor = "#33353a" FontSize = "60" FontAttributes = "Bold" Text="$11.95"></Label>
+            <Button Text="Add $7.99 Credit" BackgroundColor = "#1695A3" BorderRadius = "17" HeightRequest = "35" TextColor="White" FontSize = "13" FontAttributes = "Bold" ></Button>
+
+        </StackLayout>
+
+        <Label HorizontalTextAlignment="Center" 
+               AbsoluteLayout.LayoutBounds="0,0.57,1,0.33"
+               FontSize = "15" FontAttributes = "Bold"
+                 AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"  
+               TextColor="Black">Why pay for Credit?</Label>
+
+        <!--<StackLayout  AbsoluteLayout.LayoutBounds="0,0.5,1,0.33"
+                 AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"  VerticalOptions="Center" Spacing="0" >
+
+
+            <Label TextColor="Black" HorizontalTextAlignment="Center" FontSize = "13">Because you can reach people who aren't on</Label>
+            <Label TextColor="Black" HorizontalTextAlignment="Center" FontSize = "13">SkyApp by calling Mobile and landline</Label>
+            <Label TextColor="Black" HorizontalTextAlignment="Center" FontSize = "13">numbers or spending SMS, at low cost rates.</Label>
+
+        </StackLayout>-->
+
+        <Label AbsoluteLayout.LayoutBounds="0,0.5,1,0.33"
+                 AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center">
+            Because you can reach people who aren’t on
+            SkyApp by calling mobile and landline
+            numbers, or spending SMS, at low-cost rates.
+        </Label>
+    </AbsoluteLayout>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloWorld.MarkupExtensions"
+             x:Class="HelloWorld.ImagePage">
+    
+    <!--<AbsoluteLayout BackgroundColor="Black">
+        <ActivityIndicator 
+            IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}" 
+            Color="Aqua"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,100,100" 
+            AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Image x:Name="image" Aspect="AspectFill"
+               AbsoluteLayout.LayoutBounds="0,0,1,1"
+               AbsoluteLayout.LayoutFlags="All"/>
+    </AbsoluteLayout>-->
+
+    <!-- customMarkupExtension -->                          <!--Directly Used the FileURI as (ResourceId) because of ContentProperty(see embeddedImage file)-->
+    <!--<Image x:Name="image" Source="{local:EmbeddedImage HelloWorld.Images.background.jpg}" Aspect="AspectFill"/>-->
+
+<!--PLATFORM SPECIFIC IMAGES CODE IN XAML-->
+    <Button Image="clock.png" x:Name="btn">
+        <Button.Image>
+            <OnPlatform x:TypeArguments="FileImageSource" 
+                        iOS="clock.png"
+                        Android="clock.png"
+                        WinPhone="Images/clock.png"></OnPlatform>
+        </Button.Image>
+    </Button>
+</ContentPage>

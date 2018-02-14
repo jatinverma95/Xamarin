@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Exercises.StackLayoutExercise2">
+    <StackLayout BackgroundColor="White">
+        <Label Text="Delhi_Photographer" Margin="10"></Label>
+        <Image Source="http://lorempixel.com/1920/1080/nature/3/"/>
+        <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+            <Button BackgroundColor="Transparent" HorizontalOptions="Start" Text="Like" TextColor="LightBlue" Margin="10,0,0,0" ></Button>
+            <Button BackgroundColor="Transparent" HorizontalOptions="Start" Text="Comment" TextColor="LightBlue" ></Button>
+            <Button BackgroundColor="Transparent" HorizontalOptions="Start" Text="Share" TextColor="LightBlue" Margin="0,0,0,0" ></Button>
+        </StackLayout>
+        <BoxView BackgroundColor="#f0f0f0" HeightRequest="2"></BoxView>
+        <Label Text="700 Likes" FontAttributes="Bold" FontSize="Medium" Margin="10,0,0,0"></Label>
+        <Label Margin="10,0,0,0" Text="This is a short yesterday in Skanor, Sweden, when driving Home for couple of days in Denmark." FontSize="Medium"></Label>
+               
+    </StackLayout>
+</ContentPage>
