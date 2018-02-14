@@ -19,6 +19,7 @@ namespace HelloWorld.Exercises
         SearchGroup searchGrp;
         ObservableCollection<SearchGroup> searchElement;
 
+
         public AirbnbSearchList()
         {
             InitializeComponent();
@@ -43,18 +44,38 @@ namespace HelloWorld.Exercises
 
         void Handle_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //listView.ItemsSource = ss.GetSearches(e.NewTextValue);
-        }
+            string searchText = "";
+            for (int i = 0; i < e.NewTextValue.Length; i++)
+            {
+             
+                if (i == 0)
+                {
+                    searchText += (e.NewTextValue[i].ToString()).ToUpper();
+                }
+                else
+                {
+                    searchText += (e.NewTextValue[i].ToString()).ToLower();
+                }
+            }
 
-        void Handle_Refresh(object sender, EventArgs e)
-        {
+            ObservableCollection<Search> list = ss.GetSearches(searchText);
+            searchGrp = new SearchGroup("Recent Searches");
+
+            foreach (var listItem in list)
+            {
+                searchGrp.Add(listItem);
+            }
+
             searchElement = new ObservableCollection<SearchGroup>
             {
                 searchGrp
             };
 
-            ss.GetSearches();
+            listView.ItemsSource = searchElement;
+        }
 
+        void Handle_Refresh(object sender, EventArgs e)
+        {
             listView.ItemsSource = searchElement;
             listView.EndRefresh();
         }
@@ -82,8 +103,6 @@ namespace HelloWorld.Exercises
                 }
 
             }
-
-
 
             ss.DeleteSearch(search.Id);
 
