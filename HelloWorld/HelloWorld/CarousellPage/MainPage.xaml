@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.CarousellPage.MainPage">
+    <ContentPage Title="Page1" Icon="clock.png">
+        <Label Text="Content Of Page1"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+    </ContentPage>
+
+    <ContentPage Title="Page2" Icon="clock.png">
+        <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center"/>
+    </ContentPage>
+</CarouselPage>

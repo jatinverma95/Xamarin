@@ -13,8 +13,8 @@ namespace HelloWorld
         {
             InitializeComponent();
 
-            MainPage = new TabbeddPage.MainPage();
-       
+            MainPage = new NavigationPage(new HelloWorld.Toolbar());
+
         }
 
         protected override void OnStart()
