@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage 
+            Title="My Instagram"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:HelloWorld.Exercises.InstagramApp"
+            x:Class="HelloWorld.Exercises.InstagramApp.InstagramExercise">
+    <ContentPage Title="Page2" Icon="clock.png">
+        <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center"/>
+    </ContentPage>
+    
+    <local:ProfilePage Title="Contact" Icon="user.png"></local:ProfilePage>
+
+</TabbedPage>
