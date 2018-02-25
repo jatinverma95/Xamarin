@@ -4,11 +4,33 @@
             xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:HelloWorld.Exercises.InstagramApp"
-            x:Class="HelloWorld.Exercises.InstagramApp.InstagramExercise">
-    <ContentPage Title="Page2" Icon="clock.png">
-        <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center"/>
+            x:Class="HelloWorld.Exercises.InstagramApp.InstagramExercise"
+            xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+    <ContentPage Title="Activities" Icon="clock.png">
+        <ListView x:Name="listView" ItemSelected="Handle_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <ic:CircleImage
+                                 WidthRequest="50"
+                                HeightRequest="50"
+                                Aspect="AspectFill"
+                                Source="{Binding ImageUrl}"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"/>
+                            <Label Text="{Binding Description}"/>
+                        </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Call"/>
+                            <MenuItem Text="Delete"/>
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate> 
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage>
-    
-    <local:ProfilePage Title="Contact" Icon="user.png"></local:ProfilePage>
+
+    <local:MyProfilePage Title="Profile" Icon="user.png"></local:MyProfilePage>
 
 </TabbedPage>

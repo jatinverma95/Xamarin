@@ -19,7 +19,6 @@ namespace HelloWorld.Exercises.Services
 
         public ObservableCollection<Search> GetSearches(string filter = null)
         {
-
             if (filter == null)
                 return Searches;
             return new ObservableCollection<Search>(Searches.Where(c => c.Location.StartsWith(filter)));

@@ -9,17 +9,19 @@
               ItemTapped="Handle_ItemTapped"
               ItemSelected="Handle_ItemSelected"
               IsPullToRefreshEnabled="True"
+              SeparatorVisibility="Default"
+              SeparatorColor="Blue"
               Refreshing="Handle_Refresh">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Name}" Detail="{Binding Status}">
-                    <TextCell.ContextActions>
-                        <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}"></MenuItem>
-                        <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}"></MenuItem>
-                    </TextCell.ContextActions>
-                </TextCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Status}">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}"></MenuItem>
+                            <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}"></MenuItem>
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>

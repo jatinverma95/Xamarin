@@ -5,6 +5,9 @@ using Xamarin.Forms;
 
 namespace HelloWorld.SimpleMasterrDetailPage
 {
+     //In this App, it is for SIMPLE NAVIGATION from one page to other and sending DATA from one to another page, 
+     //THERE IS NO USE OF MASTERDETAILPAGE IN THIS.
+
 	public partial class ContactsPage : ContentPage
 	{
 		async void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
