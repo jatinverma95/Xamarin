@@ -13,7 +13,7 @@ namespace HelloWorld
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Exercises.InstagramApp.InstagramExercise());
+            MainPage = new NavigationPage(new TableVieww.TableViewPage());
 
         }
 

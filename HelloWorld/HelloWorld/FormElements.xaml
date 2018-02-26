@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="HelloWorld.FormElements">
+    <ScrollView>
+        <StackLayout>
+            <Switch IsToggled="False" Toggled="HandleToggled" x:Name="switch"/>
+            <Label x:Name="label" Text="SWITCHExample" IsVisible="{Binding Source={x:Reference switch}, Path=IsToggled}"/>
+
+            <BoxView HeightRequest="1" BackgroundColor="Black"/>
+
+            <Slider x:Name="slider" Maximum="250"  Minimum="10" Value="50" ValueChanged="HandleValueChanged"/>
+            <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:N0}'}"/>
+
+            <BoxView HeightRequest="1" BackgroundColor="Black"/>
+
+            <Stepper x:Name="stepper" Increment="5" Maximum="100" Minimum="10"/>
+            <Label Text="{Binding Source={x:Reference stepper}, Path=Value}"/>
+
+            <BoxView HeightRequest="1" BackgroundColor="Black"/>
+
+            <Entry Keyboard="Numeric" Placeholder="Phone" />
+            <Entry IsPassword="True" Completed="HandleCompleted" Placeholder="Password"/>
+            <Entry Keyboard="Chat" Placeholder="Name" TextChanged="HandleTextChanged"/>
+            <Label x:Name="label2"/>
+            <Editor BackgroundColor="PapayaWhip" VerticalOptions="FillAndExpand"/>
+
+            <BoxView HeightRequest="1" BackgroundColor="Black"/>
+
+            <Picker Title="Contact Method" x:Name="picker" SelectedIndexChanged="HandleSelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>SMS</x:String>
+                    <x:String>Email</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <DatePicker Date="{x:Static sys:DateTime.Today}" Format="d MMM yyyy" MinimumDate="1 Jan 2016" MaximumDate="30 Jan 2019" DateSelected="HandleDateSelected"/>
+            <TimePicker Time="13:00"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
